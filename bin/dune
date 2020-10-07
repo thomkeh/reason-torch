@@ -1,4 +1,3 @@
-(executable
- (name Hello)
- (public_name Hello)
- (libraries console.lib lib))
+(executables
+  (names example)
+  (libraries torch))

@@ -5,17 +5,11 @@
   "license": "MIT",
   "esy": {
     "build": "dune build -p #{self.name}",
-    "buildDev": "refmterr dune build --promote-install-files --root . --only-package #{self.name}",
+    "buildDev":
+      "refmterr dune build --promote-install-files --root . --only-package #{self.name}",
     "NOTE": "Optional release Section. Customizes result of `esy release`",
-    "release": {
-      "rewritePrefix": true,
-      "bin": [
-        "Hello"
-      ]
-    },
-    "buildEnv": {
-      "ODOC_SYNTAX": "re"
-    }
+    "release": { "rewritePrefix": true, "bin": [ "Hello" ] },
+    "buildEnv": { "ODOC_SYNTAX": "re" }
   },
   "scripts": {
     "test": "esy x Hello",
@@ -23,10 +17,11 @@
     "doc": "esy dune build @doc"
   },
   "dependencies": {
-    "@opam/dune": ">=2.6",
-    "@reason-native/console": "*",
-    "@reason-native/pastel": "*",
     "@esy-ocaml/reason": ">= 3.6.0 < 4.0.0",
+    "@opam/dune": ">=2.6",
+    "@opam/libtorch": "1.5.0",
+    "@opam/torch": "0.9",
+    "@reason-native/console": "*",
     "ocaml": "~4.10.0"
   },
   "devDependencies": {
